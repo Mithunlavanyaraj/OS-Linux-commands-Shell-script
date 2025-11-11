@@ -710,6 +710,7 @@ echo “Sorry, the object does not exist”
 fi
 ^d
 ```
+<img width="643" height="152" alt="mmm" src="https://github.com/user-attachments/assets/40351ca0-677e-4035-ab34-834241dc4692" />
 
 cat ifnested.sh 
 ```bash
@@ -736,6 +737,9 @@ $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
 ##OUTPUT
+<img width="643" height="152" alt="mmm" src="https://github.com/user-attachments/assets/40d033a3-e649-45eb-902b-76f6e9bc18f7" />
+
+<img width="621" height="132" alt="nnn" src="https://github.com/user-attachments/assets/18f26158-4f6d-4562-97fe-78e853cc70ce" />
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -764,6 +768,7 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
+<img width="556" height="107" alt="ooo" src="https://github.com/user-attachments/assets/a6130a86-d654-41e8-84aa-a7756450e502" />
 
 
 # testing compound comparisons
@@ -780,6 +785,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+<img width="475" height="293" alt="ppp" src="https://github.com/user-attachments/assets/b01f30c8-272e-4808-86c3-bea6e1dee750" />
 
 # using the case command
 cat >casecheck.sh 
@@ -798,7 +804,9 @@ esac
 ```
 $ chmod 755 casecheck.sh 
  
-$ ./casecheck.sh 
+$ ./casecheck.sh
+<img width="352" height="118" alt="qqq" src="https://github.com/user-attachments/assets/7cbfd458-9e84-4b75-87d4-39c544d65759" />
+
  
 cat > whiletest
 ```bash
@@ -814,7 +822,8 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
+ <img width="297" height="343" alt="rrr" src="https://github.com/user-attachments/assets/9f075817-a6bf-4624-b8cb-e2d03d50e5d4" />
+
  
 cat untiltest.sh 
 ```bash
@@ -828,7 +837,8 @@ done
 ``` 
 $ chmod 755 untiltest.sh
  
- 
+ <img width="538" height="181" alt="sss" src="https://github.com/user-attachments/assets/b6416cfa-95df-4ca3-9503-0a6d4eafe68f" />
+
  
 cat forin1.sh 
 ```bash
@@ -842,7 +852,8 @@ done
  
 $ chmod 755 forin1.sh
  
- 
+ <img width="363" height="217" alt="ttt" src="https://github.com/user-attachments/assets/e8979ef8-1c08-4f64-b09f-2e502696b5f5" />
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -865,9 +876,10 @@ echo “word:$test”
 done
 ```
 $ chmod 755 forin2.sh
- 
+
 $ ./forin2.sh 
- 
+ <img width="352" height="136" alt="uuu" src="https://github.com/user-attachments/assets/db76c90b-9b5b-48a1-8c5f-1771df3d2376" />
+
 cat forin3.sh 
 ```bash
 \#!/bin/bash
@@ -878,67 +890,7 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
- 
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
-
-## OUTPUT
-cat forinfile.sh 
-```bash
-#!/bin/bash
-# reading values from a file
-file="cities"
-for state in `cat $file`
-do
-echo "Visit beautiful $file“
-done
-```
-$ chmod 777 forinfile.sh
-$ cat cities
-Hyderabad
-Alampur
-Basara
-Warangal
-Adilabad
-Bhadrachalam
-Khammam
-
-## OUTPUT
-
-
-cat forctype.sh 
-```bash
-#!/bin/bash
-# testing the C-style for loop
-for (( i=1; i <= 5; i++ ))
-do
-echo "The value of i is $i"
-done
-````
-$ chmod 755 forctype.sh
-$ ./forctype.sh 
-## OUTPUT
-
-cat forctype1.sh 
-```bash
-#!/bin/bash
-# multiple variables
-for (( a=1, b=5; a <= 5; a++, b-- ))
-do
-echo "$a - $b"
-done
-```
-$ chmod 755 forctype.sh
-$ ./forctype1.sh 
-## OUTPUT
+ <img width="621" height="291" alt="vvv" src="https://github.com/user-attachments/assets/a1d6cdd9-a28d-4132-bc34-6c26b6fa2478" />
 
 cat fornested1.sh 
 ```bash
@@ -957,6 +909,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
+<img width="415" height="387" alt="yyy" src="https://github.com/user-attachments/assets/a0c1c615-94b4-4f8f-8646-872cb58247ec" />
 
  
 cat forbreak.sh 
@@ -974,95 +927,8 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
+<img width="333" height="230" alt="zzz" src="https://github.com/user-attachments/assets/999c3a74-5780-4ec7-9d5f-df49cb3972c5" />
 
-$ chmod 755 forbreak.sh
- 
-$ ./forbreak.sh 
- 
-cat forbreak.sh 
-```bash
-#!/bin/bash
-# breaking out of a for loop
-for var1 in 1 2 3 4 5
-do
-if [ $var1 -eq 3 ]
-then
-continue
-fi
-echo "Iteration number: $var1"
-done
-echo "The for loop is completed“
-```
-
- 
-$ chmod 755 forcontinue.sh
- 
-$ ./forcontinue.sh 
-## OUTPUT
- 
-cat exread.sh 
-```bash
-#!/bin/bash
-# testing the read command
-echo -n "Enter your name: "
-read name
-echo "Hello $name, welcome to my program. "
- ```
- 
-$ chmod 755 exread.sh 
- 
-$ ./exread.sh 
-## OUTPUT
-
-
- cat exread1.sh
-```bash
-#!/bin/bash
-# testing the read command
-read -p "Enter your name: " name
-echo "Hello $name, welcome to my program. “
-``` 
-$ chmod 755 exread1.sh 
-
-## OUTPUT
-
-
-
-$ ./exread1.sh 
- 
-cat funcex.sh
-```bash
-#!/bin/bash
-# trying to access script parameters inside a function
-function func {
-echo $[ $1 * $2 ]
-}
-if [ $# -eq 2 ]
-then
-value=`func $1 $2`
-echo "The result is $value"
-else
-echo "Usage: badtest1 a b"
-fi
-```
-## OUTPUT
- ./funcex.sh 
-
- 
- ./funcex.sh 1 2
-
- 
-cat argshift.sh
-```bash
-#!/bin/bash 
- while (( "$#" )); do 
-  echo $1 
-  shift 
-done
-```
-$ chmod 777 argshift.sh
-
-## OUTPUT
 $ ./argshift.sh 1 2 3
  
  cat argshift1.sh
@@ -1080,6 +946,8 @@ done
 ```
 $ chmod 777 argshift.sh
 ## OUTPUT
+<img width="341" height="315" alt="aaaa" src="https://github.com/user-attachments/assets/997c9d52-731a-4b1b-bf02-ba510ea3304b" />
+
 $ ./argshift.sh 1 2 3
  
 cat argshift.sh
@@ -1095,7 +963,9 @@ set +x
 ## OUTPUT
  ./argshift.sh 1 2 3
  
- 
+<img width="348" height="198" alt="bbbb" src="https://github.com/user-attachments/assets/3e01600a-54d1-4f3e-9001-356f786aef30" />
+
+
 cat > nc.awk
 ```bash
 BEGIN{}
@@ -1125,7 +995,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+<img width="408" height="400" alt="dddd" src="https://github.com/user-attachments/assets/9ff0df8f-af31-4b46-a8da-f3998aada6ab" />
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1152,6 +1023,7 @@ else
 fi
 ```
 ## OUTPUT 
+<img width="436" height="223" alt="eeee" src="https://github.com/user-attachments/assets/4fe6bebf-b004-443a-a3d7-456db4f9d797" />
 
 
 # RESULT:
